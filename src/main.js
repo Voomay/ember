@@ -143,4 +143,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     statsObserver.observe(statsSection);
   }
+
+  // Sticky Scroll Header
+  const navbar = document.getElementById('navbar');
+  if (navbar) {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    };
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Run initially
+  }
 });
