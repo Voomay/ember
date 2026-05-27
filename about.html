@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Ember & Iron - Custom. Strong. Built to Last." />
+    <title>About Us | Ember & Iron</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Oswald:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="./src/style.css">
+    <style>
+      .about-complex-grid { display: grid; grid-template-columns: 4fr 6fr; gap: 60px; align-items: stretch; }
+      .about-left-image { position: relative; width: 100%; height: 100%; }
+      .about-left-image .about-image-wrapper { height: 100%; padding: 0; position: absolute; inset: 0; }
+      .about-left-image .corner-accent { top: -20px; left: -20px; width: 80px; height: 80px; border-width: 8px; }
+      .about-content-split { display: grid; grid-template-columns: 1.1fr 1fr; gap: 40px; margin-top: 30px; align-items: stretch; }
+      .about-features-col { display: flex; flex-direction: column; justify-content: space-between; height: 100%; }
+      .about-features-col .check-list li { display: flex; align-items: flex-start; }
+      .about-features-col .experience-card.inline-card { position: relative; right: 0; bottom: 0; width: 100%; max-width: none; padding: 25px 25px; box-shadow: none; margin-top: 15px; height: 230px !important; flex-grow: 0; display: flex; flex-direction: column; justify-content: center; }
+      .about-features-col .experience-card.inline-card .exp-desc { max-width: 100%; }
+      @media (max-width: 1100px) {
+        .about-complex-grid { grid-template-columns: 1fr; }
+        .about-left-image { position: relative; min-height: 400px; margin-bottom: 40px; }
+        .about-left-image .about-image-wrapper { position: relative; }
+      }
+      @media (max-width: 768px) {
+        .about-content-split { grid-template-columns: 1fr; }
+      }
+      .mv-block { background: #111; padding: 40px; margin-bottom: 20px; border: 1px solid #222; transition: var(--transition); }
+      .mv-block:hover { border-color: var(--color-brand); }
+      .mv-block h3 { font-family: var(--font-heading); font-size: 1.5rem; color: #fff; margin-bottom: 15px; }
+      .mv-block p { color: var(--color-text-gray); font-size: 0.95rem; line-height: 1.6; }
+      @media (max-width: 900px) {
+        .process-steps-overlay { position: relative !important; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="site-background"></div>
+    <div class="spotlight"></div>
+
+    <nav class="navbar solid-nav" id="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="logo-link">
+          <img src="./gallery/new logo.png" alt="Ember & Iron Logo" class="circular-logo" />
+        </a>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="projects.html">Projects</a>
+          <a href="index.html#services">Services</a>
+          <a href="contact.html">Contact Us</a>
+        </div>
+        <a href="contact.html" class="nav-cta-btn">REQUEST CUSTOM WORKS</a>
+        <button class="mobile-menu-btn" aria-label="Toggle Menu">
+          <i class="fa-solid fa-hammer"></i>
+        </button>
+      </div>
+    </nav>
+
+    <div class="page-hero-banner fade-in-up">
+      <div class="overlay"></div>
+      <div class="container relative text-center" style="z-index: 1;">
+        <h1 class="hero-title">ABOUT US</h1>
+        <p class="breadcrumb">
+          <span style="color: var(--color-brand);">HOME</span> / <span style="color: #fff;">ABOUT US</span>
+        </p>
+      </div>
+    </div>
+
+    <section class="padding-section pt-0 fade-in-up" style="padding-top: 50px; padding-bottom: 100px;">
+      <div class="container about-complex-grid">
+        
+        <!-- LEFT SIDE: Image -->
+        <div class="about-left-image">
+          <div class="about-image-wrapper">
+            <div class="corner-accent"></div>
+          <img src="./gallery/new gallery/gates/23231d9172fbb3b0dd67c69dfadeb63f.jpg" alt="Ember & Iron Premium Custom Metalwork" class="main-about-img" style="width: 100%; height: 100%; object-fit: cover; border: 1px solid #222;">
+          </div>
+        </div>
+        
+        <!-- RIGHT SIDE: Content -->
+        <div class="about-right-content">
+          <h4 class="sub-title" style="margin-bottom: 15px;">ABOUT EMBER & IRON</h4>
+          <h2 class="section-heading" style="font-size: 3.2rem; margin-bottom: 30px; line-height: 1.1;">WELDING CRAFTSMANSHIP<br>FORGING EXCELLENCE</h2>
+          
+          <div class="about-content-split">
+            <!-- Left sub-column: Text -->
+            <div class="about-text-col">
+              <p class="desc-text" style="font-size: 0.9rem; margin-bottom: 20px;">Welcome to Ember & Iron, where raw metal meets decades of design, strength, and expert execution. Founded on a passion for structural integrity and high-end design, we specialize in building premium, heavy-duty custom steelwork engineered to stand the test of time. Whether it's the sleek lines of bespoke steel furniture or the heavy-duty engineering of a custom horse trailer, our forge is dedicated to master craftsmanship.</p>
+              <p class="desc-text" style="font-size: 0.9rem;">From custom barbecue braais built to withstand extreme heat, to custom-fitted gates and food trucks ready for commercial action, we handle all aspects of precision welding, bending, and structural fabrication. We don't just join metal—we engineer architectural statements, functional assets, and secure solutions built for generations.</p>
+            </div>
+            
+            <!-- Right sub-column: Features & Card -->
+            <div class="about-features-col">
+              <ul class="check-list" style="list-style: none; margin-bottom: 30px;">
+                 <li style="margin-bottom: 15px; font-family: var(--font-heading); font-weight: 700; color: #fff; font-size: 0.95rem; letter-spacing: 0.5px;"><i class="fa-solid fa-circle-check" style="color: var(--color-brand); margin-right: 12px; font-size: 1.1rem;"></i> QUALITY WORKMANSHIP</li>
+                 <li style="margin-bottom: 15px; font-family: var(--font-heading); font-weight: 700; color: #fff; font-size: 0.95rem; letter-spacing: 0.5px;"><i class="fa-solid fa-circle-check" style="color: var(--color-brand); margin-right: 12px; font-size: 1.1rem;"></i> CERTIFICATIONS & COMPLIANCE</li>
+                 <li style="font-family: var(--font-heading); font-weight: 700; color: #fff; font-size: 0.95rem; letter-spacing: 0.5px;"><i class="fa-solid fa-circle-check" style="color: var(--color-brand); margin-right: 12px; font-size: 1.1rem;"></i> AFFORDABLE PRICING</li>
+              </ul>
+              
+              <div class="experience-card inline-card">
+                 <div class="exp-content">
+                   <h2 class="exp-years" style="font-size: 3.5rem;">25<span class="plus" style="font-size: 2rem;">+</span></h2>
+                   <h3 class="exp-title" style="font-size: 1.2rem; margin-bottom: 15px;">YEAR OF<br>EXPERIENCE</h3>
+                   <p class="exp-desc" style="font-size: 0.85rem; max-width: 100%; margin-bottom: 25px;">Mastering the heat of the forge and the strength of custom steel since 2001.</p>
+                   <a href="contact.html" class="contact-link" style="font-size: 0.9rem;">CONTACT US <span><i class="fa-solid fa-circle-chevron-right" style="color: #fff; margin-left: 5px; font-size: 1.2rem;"></i></span></a>
+                 </div>
+                 <img src="./gallery/welder_mask.png" alt="Welder" class="welder-image" />
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+
+    <section class="padding-section fade-in-up" style="background-color: var(--color-black);">
+      <div class="container about-complex-grid" style="align-items: center; grid-template-columns: 1fr 1fr;">
+        <div class="mission-text-col">
+          <h4 class="sub-title">VISION & MISSION</h4>
+          <h2 class="section-heading" style="font-size: 3.2rem; line-height: 1.1;">FORGING STRENGTH.<br>CRAFTING IMPACT</h2>
+          <p class="desc-text" style="margin-bottom: 40px;">Our values are built on structural integrity and artistic execution. We approach every weld, cut, and bend with absolute dedication to detail and compliance, ensuring every piece of steel we touch is built to last a lifetime.</p>
+          
+          <div class="mission-vision-blocks">
+            <div class="mv-block">
+              <h3>OUR VISION</h3>
+              <p>To be recognized as the leading custom metalwork and heavy steel fabrication studio, where modern premium design seamlessly integrates with structural strength to build the landmarks of tomorrow.</p>
+            </div>
+            <div class="mv-block">
+              <h3>OUR MISSION</h3>
+              <p>To deliver uncompromising quality, compliance, and industrial-grade strength in every custom utility trailer, horse trailer, gate, and piece of custom furniture, prioritizing structural safety and custom artistry above all.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="mission-image-col" style="position: relative; height: 100%; display: grid; grid-template-columns: 1fr 1fr; gap: 15px; align-items: stretch; z-index: 1;">
+          <div style="display: flex; flex-direction: column; gap: 15px; justify-content: space-between; height: 100%;">
+            <img src="./gallery/new gallery/furniture/0374a8d1d1e75179cef3462064082047.jpg" alt="Metal Furniture Work" style="width: 100%; height: calc(50% - 7.5px); object-fit: cover; border: 1px solid #222; border-radius: 4px;">
+            <img src="./gallery/new gallery/braai/0689cd3ac4079d66a30291377199264f.jpg" alt="Barbecue Braai Work" style="width: 100%; height: calc(50% - 7.5px); object-fit: cover; border: 1px solid #222; border-radius: 4px;">
+          </div>
+          <div style="height: 100%;">
+            <img src="./gallery/new gallery/gates/23231d9172fbb3b0dd67c69dfadeb63f.jpg" alt="Designer Perimeter Gate" style="width: 100%; height: 100%; object-fit: cover; border: 1px solid #222; border-radius: 4px;">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="padding-section fade-in-up" style="background-color: var(--color-dark-box);">
+      <div class="container about-complex-grid" style="align-items: center; grid-template-columns: 1fr 1fr;">
+        
+        <div class="process-image-col" style="position: relative;">
+          <!-- Image with corner accent top right -->
+          <div style="position: absolute; top: -20px; right: -20px; width: 80px; height: 80px; border: 8px solid var(--color-brand); border-left: none; border-bottom: none; z-index: 0;"></div>
+          <img src="./gallery/new gallery/braai/0689cd3ac4079d66a30291377199264f.jpg" alt="Precision Fabricated Custom Steelwork" style="width: 100%; height: 550px; object-fit: cover; display: block; position: relative; z-index: 1; border: 1px solid #222;">
+          
+          <!-- Overlapping Process Steps -->
+          <div class="process-steps-overlay" style="position: absolute; bottom: 0; left: 0; right: 0; display: grid; grid-template-columns: 1fr 1fr 1fr; z-index: 2;">
+            <div style="padding: 25px 20px; background: #050505; border-right: 1px solid #111;">
+              <h2 style="font-family: var(--font-heading); color: #fff; font-size: 2.2rem; line-height: 1; margin-bottom: 5px;">01</h2>
+              <h4 style="font-family: var(--font-heading); color: var(--color-brand); font-size: 0.9rem; margin-bottom: 10px; letter-spacing: 1px;">BRIEFING</h4>
+              <p style="font-size: 0.75rem; color: #888; line-height: 1.4;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div style="padding: 25px 20px; background: linear-gradient(90deg, #050505 0%, var(--color-brand) 100%);">
+              <h2 style="font-family: var(--font-heading); color: #fff; font-size: 2.2rem; line-height: 1; margin-bottom: 5px;">02</h2>
+              <h4 style="font-family: var(--font-heading); color: #fff; font-size: 0.9rem; margin-bottom: 10px; letter-spacing: 1px;">PROCESSING</h4>
+              <p style="font-size: 0.75rem; color: rgba(255,255,255,0.9); line-height: 1.4;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div style="padding: 25px 20px; background: var(--color-brand);">
+              <h2 style="font-family: var(--font-heading); color: #fff; font-size: 2.2rem; line-height: 1; margin-bottom: 5px;">03</h2>
+              <h4 style="font-family: var(--font-heading); color: #fff; font-size: 0.9rem; margin-bottom: 10px; letter-spacing: 1px;">FINISHING</h4>
+              <p style="font-size: 0.75rem; color: rgba(255,255,255,0.9); line-height: 1.4;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="process-text-col" style="padding-left: 40px;">
+          <h4 class="sub-title">OUR PROCESS</h4>
+          <h2 class="section-heading" style="font-size: 3.2rem; line-height: 1.1; margin-bottom: 30px;">THE PRECISE ROAD<br>TO METALWORK EXCELLENCE</h2>
+          <p class="desc-text" style="margin-bottom: 20px;">We take structural steelwork from concepts and sketches into certified reality through a strict 3-stage precision process. First, we align on your exact project requirements, sizing, and load specifications. Second, our team handles cutting, bending, and heavy structural welding with maximum care. Finally, we finish, polish, coat, and inspect every piece to guarantee structural compliance and visual excellence.</p>
+          <p class="desc-text" style="margin-bottom: 40px;">No shortcuts, no compromises. Every custom trailer, stable, gate, or furniture piece undergoes exhaustive stress testing and visual polishing before handoff, ensuring it stands robust and premium for generations.</p>
+          <a href="contact.html" class="btn btn-brand" style="padding: 15px 35px; font-size: 1rem; letter-spacing: 1px;">CONTACT US</a>
+        </div>
+        
+      </div>
+    </section>
+
+    <footer class="footer-section padding-section fade-in-up">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand-col">
+            <a href="index.html" class="logo-link">
+              <img src="./gallery/new logo.png" alt="Ember & Iron Logo" class="circular-logo" />
+            </a>
+            <p class="desc-text mt-20">We forge legacies. Premium custom steelwork engineered with uncompromising strength and precision.</p>
+          </div>
+          <div class="footer-links-col">
+            <h4 class="footer-heading">QUICK LINKS</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="index.html#services">Our Services</a></li>
+              <li><a href="projects.html">Recent Projects</a></li>
+            </ul>
+          </div>
+          <div class="footer-links-col">
+            <h4 class="footer-heading">OUR SERVICES</h4>
+            <ul>
+              <li><a href="#">Custom Trailers</a></li>
+              <li><a href="#">Heavy Structural</a></li>
+              <li><a href="#">Custom Braais</a></li>
+              <li><a href="#">Emergency Repairs</a></li>
+            </ul>
+          </div>
+          <div class="footer-contact-col">
+            <h4 class="footer-heading">GET IN TOUCH</h4>
+            <ul class="contact-info">
+              <li><i class="fa-solid fa-location-dot"></i> <span>Cape Town, Western Cape</span></li>
+              <li><i class="fa-solid fa-phone"></i> <span>+27 (0) 21 555 1234</span></li>
+              <li><i class="fa-solid fa-envelope"></i> <span>info@emberandIron.co.za</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 Ember & Iron Steelworks. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/27215551234" class="whatsapp-floater" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>

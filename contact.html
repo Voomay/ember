@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Ember & Iron - Custom. Strong. Built to Last." />
+    <title>Contact Us | Ember & Iron</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Oswald:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="./src/style.css">
+    <style>
+      .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
+      .contact-form { background: var(--color-dark-box); padding: 40px; border: 1px solid #222; }
+      .form-group { margin-bottom: 20px; }
+      .form-group label { display: block; font-size: 0.9rem; margin-bottom: 8px; color: var(--color-text-gray); }
+      .form-group input, .form-group textarea { width: 100%; padding: 15px; background: var(--color-black); border: 1px solid #333; color: white; font-family: var(--font-body); }
+      .form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--color-brand); }
+      .info-box { margin-bottom: 30px; }
+      .info-box h3 { font-family: var(--font-heading); font-size: 1.5rem; color: #fff; margin-bottom: 10px; }
+      .info-box p { color: var(--color-text-gray); display: flex; align-items: center; gap: 15px; }
+      .info-box i { color: var(--color-brand); font-size: 1.2rem; }
+      @media (max-width: 900px) {
+        .contact-grid { grid-template-columns: 1fr; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="site-background"></div>
+    <div class="spotlight"></div>
+
+    <nav class="navbar solid-nav" id="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="logo-link">
+          <img src="./gallery/new logo.png" alt="Ember & Iron Logo" class="circular-logo" />
+        </a>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="projects.html">Projects</a>
+          <a href="index.html#services">Services</a>
+          <a href="contact.html">Contact Us</a>
+        </div>
+        <a href="contact.html" class="nav-cta-btn">REQUEST CUSTOM WORKS</a>
+        <button class="mobile-menu-btn" aria-label="Toggle Menu">
+          <i class="fa-solid fa-hammer"></i>
+        </button>
+      </div>
+    </nav>
+
+    <div class="page-hero-banner fade-in-up">
+      <div class="overlay"></div>
+      <div class="container relative text-center" style="z-index: 1;">
+        <h1 class="hero-title">CONTACT US</h1>
+        <p class="breadcrumb">
+          <span style="color: var(--color-brand);">HOME</span> / <span style="color: #fff;">CONTACT US</span>
+        </p>
+      </div>
+    </div>
+
+    <section class="padding-section pt-0 fade-in-up">
+      <div class="container contact-grid">
+        
+        <div class="contact-info-block">
+          <h2 class="section-heading">WE ARE READY<br>TO BUILD IT</h2>
+          <p class="desc-text mb-40">Whether you need a custom-built structural trailer, emergency welding repairs, or a bespoke braai, our forge is hot and ready.</p>
+          
+          <div class="info-box">
+            <h3>LOCATION</h3>
+            <p><i class="fa-solid fa-location-dot"></i> Cape Town, Western Cape</p>
+          </div>
+          <div class="info-box">
+            <h3>PHONE</h3>
+            <p><i class="fa-solid fa-phone"></i> +27 (0) 21 555 1234</p>
+          </div>
+          <div class="info-box">
+            <h3>EMAIL</h3>
+            <p><i class="fa-solid fa-envelope"></i> info@emberandIron.co.za</p>
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <form onsubmit="event.preventDefault(); alert('Message sent successfully!');">
+            <div class="form-group">
+              <label>FULL NAME</label>
+              <input type="text" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+              <label>EMAIL ADDRESS</label>
+              <input type="email" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+              <label>PHONE NUMBER</label>
+              <input type="tel" placeholder="Your Phone Number">
+            </div>
+            <div class="form-group">
+              <label>PROJECT DETAILS</label>
+              <textarea rows="5" placeholder="Tell us about your project..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-brand" style="width: 100%; border: none; cursor: pointer;">SEND MESSAGE</button>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: Location Map -->
+    <section class="map-section fade-in-up" style="width: 100%; height: 450px; border-top: 1px solid #222;">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d211933.1554378121!2d18.3556598587189!3d-33.924873669145695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc500f4002b53b%3A0xf20d88ca9e27117a!2sCape%20Town!5e0!3m2!1sen!2sza!4v1716768800000!5m2!1sen!2sza" width="100%" height="100%" style="border:0; filter: grayscale(1) invert(0.9) contrast(1.2);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    <footer class="footer-section padding-section fade-in-up">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand-col">
+            <a href="index.html" class="logo-link">
+              <img src="./gallery/new logo.png" alt="Ember & Iron Logo" class="circular-logo" />
+            </a>
+            <p class="desc-text mt-20">We forge legacies. Premium custom steelwork engineered with uncompromising strength and precision.</p>
+          </div>
+          <div class="footer-links-col">
+            <h4 class="footer-heading">QUICK LINKS</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="index.html#services">Our Services</a></li>
+              <li><a href="projects.html">Recent Projects</a></li>
+            </ul>
+          </div>
+          <div class="footer-links-col">
+            <h4 class="footer-heading">OUR SERVICES</h4>
+            <ul>
+              <li><a href="#">Custom Trailers</a></li>
+              <li><a href="#">Heavy Structural</a></li>
+              <li><a href="#">Custom Braais</a></li>
+              <li><a href="#">Emergency Repairs</a></li>
+            </ul>
+          </div>
+          <div class="footer-contact-col">
+            <h4 class="footer-heading">GET IN TOUCH</h4>
+            <ul class="contact-info">
+              <li><i class="fa-solid fa-location-dot"></i> <span>Cape Town, Western Cape</span></li>
+              <li><i class="fa-solid fa-phone"></i> <span>+27 (0) 21 555 1234</span></li>
+              <li><i class="fa-solid fa-envelope"></i> <span>info@emberandIron.co.za</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 Ember & Iron Steelworks. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/27215551234" class="whatsapp-floater" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
