@@ -23,7 +23,7 @@
       .about-content-split { display: grid; grid-template-columns: 1.1fr 1fr; gap: 40px; margin-top: 30px; align-items: stretch; }
       .about-features-col { display: flex; flex-direction: column; justify-content: space-between; height: 100%; }
       .about-features-col .check-list li { display: flex; align-items: flex-start; }
-      .about-features-col .experience-card.inline-card { position: relative; right: 0; bottom: 0; width: 100%; max-width: none; padding: 25px 25px; box-shadow: none; margin-top: 15px; height: 230px !important; flex-grow: 0; display: flex; flex-direction: column; justify-content: center; }
+      .about-features-col .experience-card.inline-card { position: relative; right: 0; bottom: 0; width: 100%; max-width: none; padding: 40px 30px !important; box-shadow: none; margin-top: 15px; height: auto !important; flex-grow: 0; display: flex; flex-direction: column; justify-content: center; }
       .about-features-col .experience-card.inline-card .exp-desc { max-width: 100%; }
       @media (max-width: 1100px) {
         .about-complex-grid { grid-template-columns: 1fr; }
@@ -37,7 +37,12 @@
       .mv-block:hover { border-color: var(--color-brand); }
       .mv-block h3 { font-family: var(--font-heading); font-size: 1.5rem; color: #fff; margin-bottom: 15px; }
       .mv-block p { color: var(--color-text-gray); font-size: 0.95rem; line-height: 1.6; }
-      @media (max-width: 900px) {
+      .about-split-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+      @media (max-width: 1100px) {
+        .about-split-grid { grid-template-columns: 1fr; gap: 40px; }
+        .mission-image-col { height: 450px !important; margin-top: 30px; }
+        .process-image-col { order: 2; margin-top: 50px; }
+        .process-text-col { order: 1; padding-left: 0 !important; }
         .process-steps-overlay { position: relative !important; }
       }
     </style>
@@ -123,7 +128,7 @@
     </section>
 
     <section class="padding-section fade-in-up" style="background-color: var(--color-black);">
-      <div class="container about-complex-grid" style="align-items: center; grid-template-columns: 1fr 1fr;">
+      <div class="container about-split-grid">
         <div class="mission-text-col">
           <h4 class="sub-title">VISION & MISSION</h4>
           <h2 class="section-heading" style="font-size: 3.2rem; line-height: 1.1;">FORGING STRENGTH.<br>CRAFTING IMPACT</h2>
@@ -154,7 +159,7 @@
     </section>
 
     <section class="padding-section fade-in-up" style="background-color: var(--color-dark-box);">
-      <div class="container about-complex-grid" style="align-items: center; grid-template-columns: 1fr 1fr;">
+      <div class="container about-split-grid">
         
         <div class="process-image-col" style="position: relative;">
           <!-- Image with corner accent top right -->

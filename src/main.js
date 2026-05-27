@@ -3,7 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
   const navLinks = document.querySelector('.nav-links');
   if(mobileMenuBtn && navLinks) {
-    mobileMenuBtn.addEventListener('click', () => {
+    mobileMenuBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
       mobileMenuBtn.classList.toggle('active');
       navLinks.classList.toggle('active');
     });
@@ -15,6 +16,14 @@ document.addEventListener('DOMContentLoaded', () => {
         mobileMenuBtn.classList.remove('active');
         navLinks.classList.remove('active');
       });
+    });
+
+    // Close menu when clicking outside of nav-links and mobileMenuBtn
+    document.addEventListener('click', (e) => {
+      if (!navLinks.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+        mobileMenuBtn.classList.remove('active');
+        navLinks.classList.remove('active');
+      }
     });
   }
 
@@ -90,5 +99,48 @@ document.addEventListener('DOMContentLoaded', () => {
         });
       });
     });
+  }
+
+  // Stats Counting Animation
+  const statsSection = document.querySelector('.stats-section');
+  const counters = document.querySelectorAll('.counter-val');
+  
+  if (statsSection && counters.length > 0) {
+    const runCounters = () => {
+      counters.forEach(counter => {
+        const target = +counter.getAttribute('data-target');
+        const duration = 2000; // 2 seconds animation
+        const steps = 50;
+        const stepTime = duration / steps;
+        let current = 0;
+        const increment = target / steps;
+        
+        const timer = setInterval(() => {
+          current += increment;
+          if (current >= target) {
+            current = target;
+            clearInterval(timer);
+          }
+          
+          const rounded = Math.floor(current);
+          if (target === 5000) {
+            counter.textContent = rounded.toLocaleString('en-US'); // Add comma formatting for 5,000
+          } else {
+            counter.textContent = rounded;
+          }
+        }, stepTime);
+      });
+    };
+
+    const statsObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          runCounters();
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    statsObserver.observe(statsSection);
   }
 });
