@@ -113,7 +113,25 @@ html { scroll-behavior: smooth; }
 .feature-icon { font-size: 2.2rem; color: var(--color-brand); line-height: 1; }
 .feature-content h3 { font-family: var(--font-heading); color: var(--color-text-white); font-size: 1.2rem; line-height: 1.2; margin-bottom: 15px; }
 .feature-content p { font-size: 0.85rem; color: #888; }
-.experience-card { position: absolute; right: 40px; bottom: 0; width: 380px; background-color: var(--color-brand); padding: 50px 40px; color: var(--color-text-white); display: flex; flex-direction: column; justify-content: space-between; overflow: hidden; height: 420px; box-shadow: -10px 10px 40px rgba(0,0,0,0.5); z-index: 2; }
+.experience-card {
+  position: absolute;
+  right: 40px;
+  bottom: 0;
+  width: 380px;
+  background-image: linear-gradient(rgba(212, 82, 0, 0.82), rgba(12, 12, 12, 0.88)), url('../gallery/welder_mask.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 50px 40px;
+  color: var(--color-text-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  height: 420px;
+  box-shadow: -10px 10px 40px rgba(0,0,0,0.5);
+  z-index: 2;
+}
 .exp-content { position: relative; z-index: 2; }
 .exp-years { font-family: var(--font-heading); font-size: 5rem; font-weight: 700; line-height: 1; margin-bottom: 10px; }
 .exp-years .plus { font-size: 3rem; vertical-align: top; }
@@ -121,7 +139,7 @@ html { scroll-behavior: smooth; }
 .exp-desc { font-size: 0.9rem; color: rgba(255,255,255,0.9); margin-bottom: 30px; max-width: 250px; }
 .contact-link { color: var(--color-text-white); text-decoration: none; font-weight: 700; font-size: 1rem; display: flex; align-items: center; gap: 10px; }
 .contact-link span { background: var(--color-black); border-radius: 50%; width: 24px; height: 24px; display: inline-flex; align-items: center; justify-content: center; font-size: 0.8rem; }
-.welder-image { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; object-fit: cover; opacity: 0.3; mix-blend-mode: multiply; }
+.welder-image { display: none !important; }
 
 /* ABOUT SECTION */
 .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
@@ -238,9 +256,10 @@ html { scroll-behavior: smooth; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 768px) {
-  .main-heading { font-size: 3.5rem; }
+  .main-heading { font-size: 2.6rem; }
+  .section-heading { font-size: 2.2rem !important; }
   
-  /* Mobile Menu Button - Styled Hammer Icon */
+  /* Mobile Menu Button - Styled Hamburger Icon */
   .mobile-menu-btn {
     display: flex !important;
     align-items: center;
@@ -255,6 +274,7 @@ html { scroll-behavior: smooth; }
     cursor: pointer;
     z-index: 1001; /* Layer above the slide drawer */
     transition: var(--transition);
+    margin-left: auto; /* Push hamburger button to the far right */
   }
   .mobile-menu-btn:hover {
     color: #fff;
@@ -265,7 +285,7 @@ html { scroll-behavior: smooth; }
     color: #fff;
     background: var(--color-brand);
     border-color: var(--color-brand);
-    transform: rotate(-45deg);
+    transform: rotate(90deg); /* Premium rotate for standard hamburger */
   }
   
   /* Slide out Navigation Drawer */
@@ -303,11 +323,19 @@ html { scroll-behavior: smooth; }
     border-bottom: none;
   }
 
-  .navbar .circular-logo { width: auto; height: 60px; }
+  .navbar .circular-logo { width: auto; height: 80px !important; }
   .feature-item, .service-cards-grid { grid-template-columns: 1fr; }
   .stats-grid { grid-template-columns: 1fr; gap: 60px; }
   .projects-header { flex-direction: column; align-items: flex-start; gap: 20px; }
   .footer-grid { grid-template-columns: 1fr; gap: 40px; }
+  
+  /* Experience Card Centered Background Image on Mobile */
+  .experience-card {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    padding: 45px 30px !important;
+    background-image: linear-gradient(rgba(212, 82, 0, 0.85), rgba(12, 12, 12, 0.92)), url('../gallery/welder_mask.png') !important;
+  }
 }
 .gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 25px; margin-bottom: 60px; } .gallery-item { aspect-ratio: 1; overflow: hidden; border: 1px solid #222; border-radius: 4px; } .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: var(--transition); } .gallery-item:hover img { transform: scale(1.1); filter: brightness(1.2); } @media (max-width: 768px) { .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 15px; } }
 
