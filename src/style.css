@@ -592,6 +592,7 @@ html { scroll-behavior: smooth; }
   grid-template-columns: 1fr 1fr;
   gap: 15px;
   align-items: stretch !important;
+  height: 480px;
 }
 
 @media (max-width: 768px) {
