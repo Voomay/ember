@@ -587,12 +587,11 @@ html { scroll-behavior: smooth; }
   align-items: center;
 }
 
-/* About Us Vision & Mission images grid */
 .about-mission-images {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 15px;
-  align-items: stretch;
+  align-items: stretch !important;
 }
 
 @media (max-width: 768px) {
