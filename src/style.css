@@ -104,7 +104,7 @@ html {
 .mobile-menu-btn { display: none; }
 
 /* HERO SECTION */
-.hero-wrapper { min-height: 100vh; display: flex; flex-direction: column; justify-content: space-between; padding-top: 240px; }
+.hero-wrapper { min-height: 100vh; display: flex; flex-direction: column; justify-content: space-between; padding-top: 240px; overflow: hidden; }
 .hero-content { max-width: 1300px; margin: 0 auto; width: 100%; padding: 0 40px; flex-grow: 1; }
 .hero-text-block { max-width: 700px; padding-bottom: 80px; }
 .expertly-text { color: var(--color-brand); font-weight: 700; letter-spacing: 4px; font-size: 0.9rem; margin-bottom: 20px; margin-top: 10px; }
@@ -267,9 +267,7 @@ html {
     padding: 0 20px !important;
   }
   .brand-block {
-    width: 40px !important;
-    height: 20px !important;
-    margin-left: 10px !important;
+    display: none !important;
   }
   .main-heading { font-size: 2.6rem; }
   .section-heading { font-size: 2.2rem !important; }
@@ -467,12 +465,13 @@ html {
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(212, 82, 0, 0.4);
 }
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .hero-actions {
     flex-direction: column;
     width: 100%;
+    gap: 15px;
   }
-  .hero-actions .btn {
+  .hero-actions a {
     text-align: center;
     width: 100%;
   }
