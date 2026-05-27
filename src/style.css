@@ -618,21 +618,59 @@ html { scroll-behavior: smooth; }
   }
   
   .about-mission-images {
-    grid-template-columns: 1fr !important;
-    height: auto !important;
-    margin-top: 30px;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 10px !important;
+    height: 300px !important;
+    margin-top: 25px;
   }
-  .about-mission-images div {
-    flex-direction: row !important;
-    gap: 15px !important;
-    height: auto !important;
+  .about-mission-images .left-col {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+    height: 100% !important;
   }
-  .about-mission-images div img {
-    width: calc(50% - 7.5px) !important;
-    height: 180px !important;
+  .about-mission-images .left-col img {
+    width: 100% !important;
+    height: calc(50% - 5px) !important;
   }
   .about-mission-images img {
-    height: 180px !important;
+    height: 100% !important;
+  }
+}
+
+/* Call Floater (Mobile Only) */
+.call-floater {
+  position: fixed;
+  bottom: 105px; /* Sits directly above desktop WhatsApp */
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background-color: var(--color-brand);
+  color: #fff;
+  border-radius: 50%;
+  display: none; /* Hidden on desktop */
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  z-index: 9999;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+  text-decoration: none;
+}
+.call-floater:hover {
+  transform: scale(1.1) rotate(8deg);
+  box-shadow: 0 6px 20px rgba(212, 82, 0, 0.4);
+  color: #fff;
+}
+@media (max-width: 768px) {
+  .call-floater {
+    display: flex; /* Visible only on mobile */
+    bottom: 85px; /* Sits perfectly above mobile WhatsApp */
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    font-size: 1.6rem;
   }
 }
 
