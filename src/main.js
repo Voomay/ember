@@ -157,4 +157,14 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', handleScroll);
     handleScroll(); // Run initially
   }
+
+  // URL Query Parameter Filtering Showcase (E.g. ?filter=trailers)
+  const urlParams = new URLSearchParams(window.location.search);
+  const urlFilter = urlParams.get('filter');
+  if (urlFilter && typeof projectTabs !== 'undefined' && projectTabs.length > 0) {
+    const targetTab = Array.from(projectTabs).find(tab => tab.getAttribute('data-filter') === urlFilter);
+    if (targetTab) {
+      targetTab.click();
+    }
+  }
 });
