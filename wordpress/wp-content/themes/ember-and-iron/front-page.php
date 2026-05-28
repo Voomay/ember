@@ -1,0 +1,309 @@
+<?php
+/**
+ * The front-page.php template file
+ */
+
+get_header();
+?>
+
+<!-- Video background of iron welding with sparks -->
+<div class="video-background-container">
+  <video autoplay muted loop playsinline class="hero-bg-video">
+    <source src="<?php echo esc_url( get_template_directory_uri() . '/gallery/welder-working-on-metal-at-industrial-workplace-2025-12-17-19-42-50-utc.mov' ); ?>" type="video/quicktime">
+    <source src="<?php echo esc_url( get_template_directory_uri() . '/gallery/welder-working-on-metal-at-industrial-workplace-2025-12-17-19-42-50-utc.mov' ); ?>" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div class="video-overlay"></div>
+</div>
+
+<!-- SECTION 1: Main Hero -->
+<div class="hero-wrapper" id="home">
+  <section class="hero-content fade-in-up">
+    <div class="hero-text-block">
+      <p class="expertly-text">EXPERTLY EXECUTED</p>
+      <h1 class="main-heading">
+        <span class="word-crafted">CRAFTED<span class="brand-block"></span></span> SPARKS<br>
+        IGNITE EXCELLENCE
+      </h1>
+      <p class="hero-desc">
+        Premium custom steelwork engineered with uncompromising strength and precision. If it can be forged, we can build it stronger. Built to last a lifetime.
+      </p>
+      <div class="hero-actions">
+        <a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="btn btn-brand">SPARK YOUR PROJECT</a>
+        <a href="<?php echo esc_url( home_url( '/about/' ) ); ?>" class="btn btn-secondary">ABOUT US</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="hero-bottom-section fade-in-up">
+    <div class="features-bar">
+      <div class="features-container">
+        <div class="features-list">
+          <div class="feature-item">
+            <div class="feature-icon"><i class="fa-solid fa-medal"></i></div>
+            <div class="feature-content">
+              <h3>QUALITY<br>WORKMANSHIP</h3>
+              <p>Every piece of metal is cut, forged, and welded with meticulous attention to detail and extreme durability.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon"><i class="fa-solid fa-certificate"></i></div>
+            <div class="feature-content">
+              <h3>CERTIFICATIONS &<br>COMPLIANCE</h3>
+              <p>Our heavy-duty trailers and structural braais meet the highest safety and engineering standards.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon"><i class="fa-solid fa-tags"></i></div>
+            <div class="feature-content">
+              <h3>AFFORDABLE<br>PRICING</h3>
+              <p>Unmatched premium aesthetics and industrial strength delivered at highly competitive project rates.</p>
+            </div>
+          </div>
+        </div>
+        <div class="experience-card">
+          <div class="exp-content">
+            <h2 class="exp-years">25<span class="plus">+</span></h2>
+            <h3 class="exp-title">YEAR OF<br>EXPERIENCE</h3>
+            <p class="exp-desc">Decades of mastering heat and steel to bring your most robust custom visions to life.</p>
+            <a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="contact-link">CONTACT US <span>➔</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 2: About / Craftsmanship -->
+<section class="about-section padding-section" id="about">
+  <div class="container about-grid">
+    <div class="about-image-wrapper fade-in-up">
+      <div class="corner-accent"></div>
+      <img src="<?php echo esc_url( get_template_directory_uri() . '/gallery/new gallery/gates/e16cc3935453a18b912b6ce3d1bc5efd.jpg' ); ?>" alt="Ember & Iron Premium Custom Gate Panel" class="main-about-img" style="border: 1px solid #222; border-radius: 4px;">
+      <div class="project-count-box">
+        <div class="icon"><i class="fa-solid fa-hammer"></i></div>
+        <div class="details">
+          <h2>500+</h2>
+          <p>CUSTOM PROJECTS<br>FABRICATED</p>
+        </div>
+      </div>
+    </div>
+    <div class="about-text-wrapper fade-in-up" style="animation-delay: 0.2s;">
+      <h4 class="sub-title">ABOUT US</h4>
+      <h2 class="section-heading">WELDING CRAFTSMANSHIP FORGING EXCELLENCE</h2>
+      <p class="desc-text">Welcome to Ember & Iron, Cape Town's premier destination for custom metalwork and heavy-duty structural steelwork. We master the heat of the forge to deliver uncompromising strength, visual beauty, and absolute compliance. From high-capacity spit braais to bespoke double-axle horse trailers, we engineer durability.</p>
+      <p class="desc-text">We blend structural-grade metal engineering with modern premium aesthetics. Every custom item we fabricate is stress-tested, polished, and coated to endure extreme environmental demands and a lifetime of rigorous use.</p>
+      
+      <div class="highlight-box">
+        <p>✓ "The strength of a structure is defined by the hands that forged it. We build it once, and we build it right."</p>
+      </div>
+      
+      <div class="about-action">
+        <a href="<?php echo esc_url( home_url( '/about/' ) ); ?>" class="btn btn-brand">READ MORE ABOUT US</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 3: Stats Counter -->
+<section class="stats-section padding-section dark-bg-banner">
+  <div class="container stats-grid fade-in-up">
+    <div class="stat-box">
+      <h2 class="stat-num"><span class="counter-val" data-target="5000">0</span><span class="plus">+</span></h2>
+      <p>HOURS OF WELDING</p>
+    </div>
+    <div class="stat-box">
+      <h2 class="stat-num"><span class="counter-val" data-target="100">0</span><span class="plus">%</span></h2>
+      <p>QUALITY COMPLIANT</p>
+    </div>
+    <div class="stat-box">
+      <h2 class="stat-num"><span class="counter-val" data-target="10">0</span><span class="plus">+</span></h2>
+      <p>WELDING PROFESSIONALS</p>
+    </div>
+    <div class="stat-box">
+      <h2 class="stat-num"><span class="counter-val" data-target="500">0</span><span class="plus">+</span></h2>
+      <p>CUSTOM WORKS FORGED</p>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 4: Why Choose Us -->
+<section class="mission-section padding-section">
+  <div class="container mission-grid">
+    <div class="mission-text fade-in-up">
+      <h4 class="sub-title">WHY CHOOSE US</h4>
+      <h2 class="section-heading">UNMATCHED STRENGTH.<br>UNRIVALED CRAFT.</h2>
+      <p class="desc-text">We don't just weld steel; we engineer durability. When you choose Ember & Iron, you are choosing a lifetime of structural integrity.</p>
+      
+      <div class="accordion">
+        <div class="accordion-item">
+          <div class="accordion-header">
+            <h3>CERTIFIED EXPERTS</h3>
+          </div>
+          <div class="accordion-body">
+            <p>Our team consists of highly trained and fully certified welding professionals with decades of combined experience.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-header">
+            <h3>PREMIUM MATERIALS</h3>
+          </div>
+          <div class="accordion-body">
+            <p>We source only the highest grade industrial steel and alloys to ensure your project withstands the test of time.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-header">
+            <h3>CUSTOM PRECISION</h3>
+          </div>
+          <div class="accordion-body">
+            <p>No two projects are identical. We provide bespoke fabrication tailored perfectly to your unique dimensional requirements.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mission-image fade-in-up mission-images-grid" style="animation-delay: 0.2s;">
+      <img src="<?php echo esc_url( get_template_directory_uri() . '/gallery/new gallery/braai/0689cd3ac4079d66a30291377199264f.jpg' ); ?>" alt="Premium Custom Braai" style="width: 100%; height: 380px; object-fit: cover; border: 1px solid #222; border-radius: 4px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+      <img src="<?php echo esc_url( get_template_directory_uri() . '/gallery/new gallery/gates/23231d9172fbb3b0dd67c69dfadeb63f.jpg' ); ?>" alt="Designer Perimeter Gate" style="width: 100%; height: 380px; object-fit: cover; border: 1px solid #222; border-radius: 4px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); transform: translateY(20px); margin-top: 40px;">
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 5: Services Grid -->
+<section class="services-grid-section padding-section" id="services">
+  <div class="container">
+    <div class="text-center fade-in-up">
+      <h4 class="sub-title">WHAT WE DO</h4>
+      <h2 class="section-heading">PREMIUM STEEL FABRICATION & WELDING</h2>
+    </div>
+    
+    <div class="service-cards-grid">
+      <!-- Card 1: STEEL FURNITURE -->
+      <div class="service-box fade-in-up">
+        <div class="s-icon"><i class="fa-solid fa-chair"></i></div>
+        <h3>STEEL FURNITURE</h3>
+        <p>Architectural steel framing, bespoke luxury dining tables, steel-frame chairs, and custom wood-metal furniture fitouts crafted for premium modern interiors.</p>
+        <a href="<?php echo esc_url( home_url( '/projects/?filter=furniture' ) ); ?>" class="read-more">VIEW PORTFOLIO</a>
+      </div>
+      <!-- Card 2: BARBECUE BRAAIS -->
+      <div class="service-box fade-in-up">
+        <div class="s-icon"><i class="fa-solid fa-fire"></i></div>
+        <h3>BARBECUE BRAAIS</h3>
+        <p>Heavy-duty custom built-in braais, mobile trailer braais, commercial rotisserie stations, and premium steel grids built to withstand extreme temperatures.</p>
+        <a href="<?php echo esc_url( home_url( '/projects/?filter=braais' ) ); ?>" class="read-more">VIEW PORTFOLIO</a>
+      </div>
+      <!-- Card 3: GATES & SECURITY -->
+      <div class="service-box fade-in-up">
+        <div class="s-icon"><i class="fa-solid fa-shield-halved"></i></div>
+        <h3>GATES & SECURITY</h3>
+        <p>Bespoke sliding driveway gates, double gates, security fences, and high-end laser-cut decorative panels engineered for uncompromised security.</p>
+        <a href="<?php echo esc_url( home_url( '/projects/?filter=gates' ) ); ?>" class="read-more">VIEW PORTFOLIO</a>
+      </div>
+      <!-- Card 4: CUSTOM TRAILERS -->
+      <div class="service-box fade-in-up">
+        <div class="s-icon"><i class="fa-solid fa-truck"></i></div>
+        <h3>CUSTOM TRAILERS</h3>
+        <p>Complete custom food trailer chassis modifications, structural framing, heavy metal catering fitouts, and custom aluminum welding services.</p>
+        <a href="<?php echo esc_url( home_url( '/projects/?filter=trailers' ) ); ?>" class="read-more">VIEW PORTFOLIO</a>
+      </div>
+      <!-- Card 5: CUSTOM TRAILERS (Duplicate entry linked to unified category) -->
+      <div class="service-box fade-in-up">
+        <div class="s-icon"><i class="fa-solid fa-caravan"></i></div>
+        <h3>HORSE TRAILERS</h3>
+        <p>Heavy double-axle equestrian trailer chassis fabrications, horse box framing repairs, access doors, and custom trailer structural welds.</p>
+        <a href="<?php echo esc_url( home_url( '/projects/?filter=trailers' ) ); ?>" class="read-more">VIEW PORTFOLIO</a>
+      </div>
+      <!-- Card 6: BESPOKE CUSTOM WORKS -->
+      <div class="service-box fade-in-up">
+        <div class="s-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+        <h3>BESPOKE CUSTOM WORKS</h3>
+        <p>Precision geometric firepits, heavy-duty fire pit rings, structural metal framing, mobile repairs, and one-of-a-kind custom iron fabrications.</p>
+        <a href="<?php echo esc_url( home_url( '/projects/?filter=custom' ) ); ?>" class="read-more">VIEW PORTFOLIO</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 6.5: Product Gallery -->
+<section class="product-gallery-section padding-section dark-bg-banner">
+  <div class="container fade-in-up">
+    <div class="text-center">
+      <h4 class="sub-title">OUR CRAFT IN ACTION</h4>
+      <h2 class="section-heading">PRODUCT GALLERY</h2>
+    </div>
+    
+    <div class="gallery-grid mt-40">
+      <div class="gallery-item"><img src="<?php echo esc_url( get_template_directory_uri() . '/gallery/new gallery/furniture/0374a8d1d1e75179cef3462064082047.jpg' ); ?>" alt="Steel Dining Table"></div>
+      <div class="gallery-item"><img src="<?php echo esc_url( get_template_directory_uri() . '/gallery/new gallery/braai/0689cd3ac4079d66a30291377199264f.jpg' ); ?>" alt="Premium Built-in Braai"></div>
+      <div class="gallery-item"><img src="<?php echo esc_url( get_template_directory_uri() . '/gallery/new gallery/gates/23231d9172fbb3b0dd67c69dfadeb63f.jpg' ); ?>" alt="Designer Driveway Gate"></div>
+      <div class="gallery-item"><img src="<?php echo esc_url( get_template_directory_uri() . '/gallery/new gallery/food trailer/3b78771719fc3232bc000fad1158d64d.jpg' ); ?>" alt="Custom Food Trailer Chassis"></div>
+      <div class="gallery-item"><img src="<?php echo esc_url( get_template_directory_uri() . '/gallery/new gallery/horse trailer/05234e6c4054ed08a57244e12a9885b7.jpg' ); ?>" alt="Heavy-duty Horse Trailer"></div>
+      <div class="gallery-item"><img src="<?php echo esc_url( get_template_directory_uri() . '/gallery/new gallery/firepit/3bb27ace6dd76b7f46646776ed564de0.jpg' ); ?>" alt="Custom Geometrical Firepit"></div>
+      <div class="gallery-item"><img src="<?php echo esc_url( get_template_directory_uri() . '/gallery/new gallery/furniture/76788ce70049796ffb1cb4179866bba6.jpg' ); ?>" alt="Industrial Metal Bookshelf"></div>
+      <div class="gallery-item"><img src="<?php echo esc_url( get_template_directory_uri() . '/gallery/new gallery/gates/34516f65bfee678c228fac39227c0c9a.jpg' ); ?>" alt="Bespoke Laser-Cut Entrance Gate"></div>
+    </div>
+    <div class="text-center mt-40">
+      <a href="<?php echo esc_url( home_url( '/projects/' ) ); ?>" class="btn btn-brand">VIEW FULL PORTFOLIO</a>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 7: FAQ Background Overlap -->
+<section class="faq-section padding-section">
+  <div class="faq-bg">
+    <img src="<?php echo esc_url( get_template_directory_uri() . '/gallery/faq_bg.png' ); ?>" alt="Sparks Background">
+  </div>
+  <div class="container relative">
+    <div class="faq-box fade-in-up">
+      <h4 class="sub-title text-center">FAQ</h4>
+      <h2 class="section-heading text-center">WHAT YOU SHOULD KNOW</h2>
+      
+      <div class="faq-grid">
+        <div class="faq-col">
+          <div class="faq-item">
+            <div class="faq-q">WHAT METALS DO YOU COMMONLY WORK WITH? <span>+</span></div>
+            <div class="faq-a">
+              <p>We work with carbon steel, stainless steel, and aluminum.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">IS CUSTOMIZATION AVAILABLE? <span>+</span></div>
+            <div class="faq-a">
+              <p>Absolutely. Custom trailers and braais are our specialty. We will work with you to ensure your project meets your exact dimensions and aesthetic requirements.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">DO YOU BUILD CUSTOM BRAAIS? <span>+</span></div>
+            <div class="faq-a">
+              <p>Yes, we design and manufacture heavy-duty custom braais, including built-in units, mobile braais, and spit braais built to endure extreme heat.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="faq-col">
+          <div class="faq-item">
+            <div class="faq-q">ARE WELDING REPAIRS DONE ON-SITE? <span>+</span></div>
+            <div class="faq-a">
+              <p>Yes, we offer mobile welding services for urgent structural repairs, heavy equipment, and gate fixes directly at your location.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">HOW LONG DOES IT TAKE? <span>+</span></div>
+            <div class="faq-a">
+              <p>Project timelines vary depending on complexity. Small custom braais take 3-5 days, while larger trailers or structural framing can take 2-3 weeks.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">DO YOU GUARANTEE YOUR WORKMANSHIP? <span>+</span></div>
+            <div class="faq-a">
+              <p>We stand behind our craftsmanship with a solid 12-month structural warranty on all welding and metal fabrication work.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<?php
+get_footer();
