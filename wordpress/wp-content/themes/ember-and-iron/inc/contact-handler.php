@@ -27,7 +27,7 @@ function ember_iron_handle_contact_form() {
 	}
 
 	// Set up recipient email address
-	$to = 'info@emberandiron.co.za';
+	$to = get_theme_mod( 'ember_iron_email', 'info@emberandiron.co.za' );
 
 	// Subject lines
 	$subject = 'Ember & Iron Steelworks - New Customer Inquiry from ' . $name;

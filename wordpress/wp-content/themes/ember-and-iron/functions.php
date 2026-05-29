@@ -111,3 +111,68 @@ add_action( 'init', 'ember_iron_register_projects_cpt' );
 
 // Include dynamic custom forms POST contact router
 require_once get_template_directory() . '/inc/contact-handler.php';
+
+/**
+ * Clean phone numbers to only digits for tel: links
+ */
+function ember_iron_clean_phone( $phone ) {
+	return preg_replace( '/[^0-9]/', '', $phone );
+}
+
+/**
+ * Clean and format WhatsApp link automatically
+ */
+function ember_iron_whatsapp_link( $number ) {
+	$clean = preg_replace( '/[^0-9]/', '', $number );
+	if ( strpos( $clean, '0' ) === 0 && strlen( $clean ) === 10 ) {
+		$clean = '27' . substr( $clean, 1 );
+	}
+	return 'https://wa.me/' . $clean;
+}
+
+/**
+ * Register Customizer settings for phone numbers and email
+ */
+function ember_iron_customize_register( $wp_customize ) {
+	// Add section for Contact Info
+	$wp_customize->add_section( 'ember_iron_contact_section', array(
+		'title'    => __( 'Contact Information', 'ember-and-iron' ),
+		'priority' => 30,
+	) );
+
+	// Setting: Business Phone Number
+	$wp_customize->add_setting( 'ember_iron_phone', array(
+		'default'           => '+27 (0) 62 943 8090',
+		'sanitize_callback' => 'sanitize_text_field',
+	) );
+	$wp_customize->add_control( 'ember_iron_phone', array(
+		'label'    => __( 'Business Phone Number', 'ember-and-iron' ),
+		'section'  => 'ember_iron_contact_section',
+		'type'     => 'text',
+	) );
+
+	// Setting: WhatsApp Number
+	$wp_customize->add_setting( 'ember_iron_whatsapp', array(
+		'default'           => '+27 (0) 62 943 8090',
+		'sanitize_callback' => 'sanitize_text_field',
+	) );
+	$wp_customize->add_control( 'ember_iron_whatsapp', array(
+		'label'    => __( 'WhatsApp Number', 'ember-and-iron' ),
+		'section'  => 'ember_iron_contact_section',
+		'type'     => 'text',
+		'description' => __( 'Can be different from the business number. Standard or international format.', 'ember-and-iron' ),
+	) );
+
+	// Setting: Contact Email
+	$wp_customize->add_setting( 'ember_iron_email', array(
+		'default'           => 'info@emberandiron.co.za',
+		'sanitize_callback' => 'sanitize_email',
+	) );
+	$wp_customize->add_control( 'ember_iron_email', array(
+		'label'    => __( 'Contact Email Address', 'ember-and-iron' ),
+		'section'  => 'ember_iron_contact_section',
+		'type'     => 'email',
+		'description' => __( 'All contact form submissions will be sent to this email address.', 'ember-and-iron' ),
+	) );
+}
+add_action( 'customize_register', 'ember_iron_customize_register' );

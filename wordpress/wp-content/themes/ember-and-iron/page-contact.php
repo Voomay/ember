@@ -45,11 +45,11 @@ get_header();
       </div>
       <div class="info-box">
         <h3>PHONE</h3>
-        <p><i class="fa-solid fa-phone"></i> +27 (0) 62 943 8090</p>
+        <p><i class="fa-solid fa-phone"></i> <?php echo esc_html( get_theme_mod( 'ember_iron_phone', '+27 (0) 62 943 8090' ) ); ?></p>
       </div>
       <div class="info-box">
         <h3>EMAIL</h3>
-        <p><i class="fa-solid fa-envelope"></i> info@emberandIron.co.za</p>
+        <p><i class="fa-solid fa-envelope"></i> <?php echo esc_html( get_theme_mod( 'ember_iron_email', 'info@emberandiron.co.za' ) ); ?></p>
       </div>
     </div>
 

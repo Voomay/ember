@@ -31,8 +31,8 @@
             <h4 class="footer-heading">GET IN TOUCH</h4>
             <ul class="contact-info">
               <li><i class="fa-solid fa-location-dot"></i> <span>Cape Town, Western Cape</span></li>
-              <li><i class="fa-solid fa-phone"></i> <span>+27 (0) 62 943 8090</span></li>
-              <li><i class="fa-solid fa-envelope"></i> <span>info@emberandiron.co.za</span></li>
+              <li><i class="fa-solid fa-phone"></i> <span><?php echo esc_html( get_theme_mod( 'ember_iron_phone', '+27 (0) 62 943 8090' ) ); ?></span></li>
+              <li><i class="fa-solid fa-envelope"></i> <span><?php echo esc_html( get_theme_mod( 'ember_iron_email', 'info@emberandiron.co.za' ) ); ?></span></li>
             </ul>
           </div>
         </div>
@@ -43,12 +43,18 @@
     </footer>
 
     <!-- Floating Call Button (Mobile Only) -->
-    <a href="tel:+27629438090" class="call-floater" aria-label="Call Us">
+    <?php
+    $raw_phone = ember_iron_clean_phone( get_theme_mod( 'ember_iron_phone', '+27 (0) 62 943 8090' ) );
+    ?>
+    <a href="tel:<?php echo esc_attr( $raw_phone ); ?>" class="call-floater" aria-label="Call Us">
       <i class="fa-solid fa-phone"></i>
     </a>
 
     <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/27629438090" class="whatsapp-floater" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+    <?php
+    $whatsapp_url = ember_iron_whatsapp_link( get_theme_mod( 'ember_iron_whatsapp', '+27 (0) 62 943 8090' ) );
+    ?>
+    <a href="<?php echo esc_url( $whatsapp_url ); ?>" class="whatsapp-floater" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
       <i class="fa-brands fa-whatsapp"></i>
     </a>
 
