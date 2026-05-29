@@ -174,5 +174,55 @@ function ember_iron_customize_register( $wp_customize ) {
 		'type'     => 'email',
 		'description' => __( 'All contact form submissions will be sent to this email address.', 'ember-and-iron' ),
 	) );
+
+	// Add section for Social Media Links
+	$wp_customize->add_section( 'ember_iron_social_section', array(
+		'title'    => __( 'Social Media Links', 'ember-and-iron' ),
+		'priority' => 31,
+	) );
+
+	// Setting: Facebook
+	$wp_customize->add_setting( 'ember_iron_facebook', array(
+		'default'           => '',
+		'sanitize_callback' => 'esc_url_raw',
+	) );
+	$wp_customize->add_control( 'ember_iron_facebook', array(
+		'label'    => __( 'Facebook Page URL', 'ember-and-iron' ),
+		'section'  => 'ember_iron_social_section',
+		'type'     => 'url',
+	) );
+
+	// Setting: Instagram
+	$wp_customize->add_setting( 'ember_iron_instagram', array(
+		'default'           => '',
+		'sanitize_callback' => 'esc_url_raw',
+	) );
+	$wp_customize->add_control( 'ember_iron_instagram', array(
+		'label'    => __( 'Instagram Profile URL', 'ember-and-iron' ),
+		'section'  => 'ember_iron_social_section',
+		'type'     => 'url',
+	) );
+
+	// Setting: TikTok
+	$wp_customize->add_setting( 'ember_iron_tiktok', array(
+		'default'           => '',
+		'sanitize_callback' => 'esc_url_raw',
+	) );
+	$wp_customize->add_control( 'ember_iron_tiktok', array(
+		'label'    => __( 'TikTok Profile URL', 'ember-and-iron' ),
+		'section'  => 'ember_iron_social_section',
+		'type'     => 'url',
+	) );
+
+	// Setting: Google
+	$wp_customize->add_setting( 'ember_iron_google', array(
+		'default'           => '',
+		'sanitize_callback' => 'esc_url_raw',
+	) );
+	$wp_customize->add_control( 'ember_iron_google', array(
+		'label'    => __( 'Google Business URL', 'ember-and-iron' ),
+		'section'  => 'ember_iron_social_section',
+		'type'     => 'url',
+	) );
 }
 add_action( 'customize_register', 'ember_iron_customize_register' );

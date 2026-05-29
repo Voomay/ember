@@ -34,6 +34,29 @@
               <li><i class="fa-solid fa-phone"></i> <span><?php echo esc_html( get_theme_mod( 'ember_iron_phone', '+27 (0) 62 943 8090' ) ); ?></span></li>
               <li><i class="fa-solid fa-envelope"></i> <span><?php echo esc_html( get_theme_mod( 'ember_iron_email', 'info@emberandiron.co.za' ) ); ?></span></li>
             </ul>
+            <?php
+            $facebook  = get_theme_mod( 'ember_iron_facebook' );
+            $instagram = get_theme_mod( 'ember_iron_instagram' );
+            $tiktok    = get_theme_mod( 'ember_iron_tiktok' );
+            $google    = get_theme_mod( 'ember_iron_google' );
+
+            if ( ! empty( $facebook ) || ! empty( $instagram ) || ! empty( $tiktok ) || ! empty( $google ) ) :
+            ?>
+              <div class="footer-social-links" style="margin-top: 20px; display: flex; gap: 15px; align-items: center;">
+                <?php if ( ! empty( $facebook ) ) : ?>
+                  <a href="<?php echo esc_url( $facebook ); ?>" target="_blank" rel="noopener noreferrer" style="color: var(--color-brand); font-size: 1.25rem; transition: var(--transition);" onmouseover="this.style.color='#fff'; this.style.transform='translateY(-2px)';" onmouseout="this.style.color='var(--color-brand)'; this.style.transform='none';"><i class="fa-brands fa-facebook"></i></a>
+                <?php endif; ?>
+                <?php if ( ! empty( $instagram ) ) : ?>
+                  <a href="<?php echo esc_url( $instagram ); ?>" target="_blank" rel="noopener noreferrer" style="color: var(--color-brand); font-size: 1.25rem; transition: var(--transition);" onmouseover="this.style.color='#fff'; this.style.transform='translateY(-2px)';" onmouseout="this.style.color='var(--color-brand)'; this.style.transform='none';"><i class="fa-brands fa-instagram"></i></a>
+                <?php endif; ?>
+                <?php if ( ! empty( $tiktok ) ) : ?>
+                  <a href="<?php echo esc_url( $tiktok ); ?>" target="_blank" rel="noopener noreferrer" style="color: var(--color-brand); font-size: 1.25rem; transition: var(--transition);" onmouseover="this.style.color='#fff'; this.style.transform='translateY(-2px)';" onmouseout="this.style.color='var(--color-brand)'; this.style.transform='none';"><i class="fa-brands fa-tiktok"></i></a>
+                <?php endif; ?>
+                <?php if ( ! empty( $google ) ) : ?>
+                  <a href="<?php echo esc_url( $google ); ?>" target="_blank" rel="noopener noreferrer" style="color: var(--color-brand); font-size: 1.25rem; transition: var(--transition);" onmouseover="this.style.color='#fff'; this.style.transform='translateY(-2px)';" onmouseout="this.style.color='var(--color-brand)'; this.style.transform='none';"><i class="fa-brands fa-google"></i></a>
+                <?php endif; ?>
+              </div>
+            <?php endif; ?>
           </div>
         </div>
         <div class="footer-bottom">
